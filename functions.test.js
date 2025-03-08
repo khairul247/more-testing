@@ -1,4 +1,5 @@
-const { sum, capitalize, reverseString, calculator} = require('./functions');
+const { sum, capitalize, reverseString, calculator, analyzeArray} = require('./functions');
+const caesarCipher = require('./caesar-cipher');
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -22,4 +23,17 @@ test('capitalize', () => {
     expect(calculator.add(9,0)).toBe(9);
   })
   
-  
+  test('Caesar Cipher', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+  })
+
+  test('correctly analyze the array', () => {
+    const result = analyzeArray([1,8,3,4,2,6]);
+
+    expect(result).toEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6
+    })
+  })

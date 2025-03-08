@@ -25,9 +25,19 @@ const calculator = {
   }
 }
 
+function analyzeArray(array){
+  return {
+    average: array.reduce((acc,num) => acc + num, 0)/array.length,
+    min: Math.min(...array),
+    max: Math.max(...array),
+    length: array.length
+  }
+};
+
 module.exports = {
   sum,
   capitalize,
   reverseString,
-  calculator
+  calculator,
+  analyzeArray
 };
