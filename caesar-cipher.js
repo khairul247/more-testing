@@ -38,3 +38,4 @@ const caesarCipher = (sentence, shift = 0) => {
 
 module.exports = caesarCipher;
 
+console.log(caesarCipher(`Beware the Ides of March.`,7));
